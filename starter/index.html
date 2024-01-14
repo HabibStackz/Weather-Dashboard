@@ -18,17 +18,18 @@
   <!-- max-width for ultra wide resolutions -->
   <div class="container-fluid" style="max-width: 1400px">
     <div class="row">
-      <aside class="col-lg-3 pb-3">
-        <h2 id="form-heading" class="mt-1 h3 form-label">
+      <aside class="col-lg-3 col-md-4 p-3">
+        <h2 id="form-heading" class="mt-2 h3 form-label">
           Search for a City:
         </h2>
+
         <form id="search-form" class="form">
           <div class="form-inline form-group">
             <div class="input-group">
               <input class="form-input weather-search" type="text" id="search-input" placeholder="London"
                 aria-labelledby="form-heading" aria-controls="today forecast" />
               <div class="input-group-append">
-                <button type="submit" class="btn search-button" id="search-button" aria-label="submit search">
+                <button type="submit" class="btn text-center mt-2 btn-primary search-button" id="search-button" aria-label="submit search">
                   Search
                 </button>
                 <hr class="hr weather-hr" />
@@ -36,12 +37,78 @@
             </div>
           </div>
         </form>
-        <div class="list-group" id="history"></div>
+        <div class="list-group" id="history">
+          history
+        </div>
       </aside>
 
       <div class="col-lg-9 pb-3">
-        <section id="today" class="mt-3" role="region" aria-live="polite"></section>
-        <section id="forecast" class="row mt-3" role="region" aria-live="polite"></section>
+        <section id="today" class="mt-3 " role="region" aria-live="polite">
+          <h2 class="display-5 fw-bold">London</h2>
+          <p>Temp: </p>
+          <p>Wind: </p>
+          <p>Humidity: </p>
+
+        </section>
+        <section id="forecast" class="row mt-3" role="region" aria-live="polite">
+          <h2>5-Day Forecast</h2>
+          <div class="row">
+            <div class="col mb-3">
+              <div class="card border-0 bg-secondary text-white">
+                <div class="card-body p-3 text-white">
+                  <h5 class="card-title fw-semibold">City & Date</h5>
+                  <h6 class="card-text my-3 mt-3">Temp: °C</h6>
+                  <h6 class="card-text my-3">Wind:  M/S</h6>
+                  <h6 class="card-text my-3">Humidity: %</h6>
+                </div>
+              </div>
+            </div>
+
+            <div class="col mb-3">
+              <div class="card border-0 bg-secondary text-white">
+                <div class="card-body p-3 text-white">
+                  <h5 class="card-title fw-semibold">City & Date</h5>
+                  <h6 class="card-text my-3 mt-3">Temp: °C</h6>
+                  <h6 class="card-text my-3">Wind:  M/S</h6>
+                  <h6 class="card-text my-3">Humidity: %</h6>
+                </div>
+              </div>
+            </div>
+
+            <div class="col mb-3">
+              <div class="card border-0 bg-secondary text-white">
+                <div class="card-body p-3 text-white">
+                  <h5 class="card-title fw-semibold">City & Date</h5>
+                  <h6 class="card-text my-3 mt-3">Temp: °C</h6>
+                  <h6 class="card-text my-3">Wind:  M/S</h6>
+                  <h6 class="card-text my-3">Humidity: %</h6>
+                </div>
+              </div>
+            </div>
+
+            <div class="col mb-3">
+              <div class="card border-0 bg-secondary text-white">
+                <div class="card-body p-3 text-white">
+                  <h5 class="card-title fw-semibold">City & Date</h5>
+                  <h6 class="card-text my-3 mt-3">Temp: °C</h6>
+                  <h6 class="card-text my-3">Wind:  M/S</h6>
+                  <h6 class="card-text my-3">Humidity: %</h6>
+                </div>
+              </div>
+            </div>
+
+            <div class="col mb-3">
+              <div class="card border-0 bg-secondary text-white">
+                <div class="card-body p-3 text-white">
+                  <h5 class="card-title fw-semibold">City & Date</h5>
+                  <h6 class="card-text my-3 mt-3">Temp: °C</h6>
+                  <h6 class="card-text my-3">Wind:  M/S</h6>
+                  <h6 class="card-text my-3">Humidity: %</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </div>
