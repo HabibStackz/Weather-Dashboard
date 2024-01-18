@@ -1,16 +1,12 @@
-// const cityInput = document.querySelector(".form-input");
-// const searchButton = document.querySelector(".search-button");
-
-// const getCityCoordinates = () => {
-//     const cityName = cityInput.value.trim();
-//     event.preventDefault()
-//     if(!cityName) return;
-
-//     console.log(cityName);
-// }
+const cityInput = document.getElementById("search-input")
+const searchButton = document.getElementById("search-button")
+const currentWeatherDiv = document.getElementById("today")
+const fiveDaysForecastDiv= document.getElementById("forecast")
 
 
-// searchButton.addEventListener("click", getCityCoordinates);
+const API = "304e8679bbd07511b4fef6a70463c0f8"
+
+
 
 const query = 
 
