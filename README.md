@@ -23,6 +23,7 @@ The Weather App is a web application that allows users to check the current weat
 - **Search History:** Easily access previously searched cities with the search history feature.
 
 ## Link
+https://habibstackz.github.io/Weather-Dashboard/
 
 ## Usage
 1. Enter a city name in the search bar and submit the form.
