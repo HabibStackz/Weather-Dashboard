@@ -136,3 +136,17 @@ document.getElementById('search-form').addEventListener('submit', async function
     }
   }
 });
+
+// Function to load saved data from local storage on page load
+window.onload = function () {
+  const savedWeatherData = JSON.parse(localStorage.getItem('weatherData'));
+  const savedForecastData = JSON.parse(localStorage.getItem('forecastData'));
+
+  if (savedWeatherData) {
+    updateWeatherUI(savedWeatherData);
+  }
+
+  if (savedForecastData) {
+    updateForecastUI(savedForecastData);
+  }
+};
