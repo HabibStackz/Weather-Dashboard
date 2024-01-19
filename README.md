@@ -9,6 +9,8 @@
 - [Installation](#installation)
 - [Local Storage](#local-storage)
 - [License](#license)
+- [Credits](#credits)
+- [Author](#author)
 ## Overview
 
 The Weather App is a web application that allows users to check the current weather conditions and a 5-day forecast for a specific city. It leverages the OpenWeatherMap API to retrieve real-time weather data and display it in a user-friendly interface.
@@ -51,3 +53,13 @@ const apiKey = "your-api-key";
 
 ## Local Storage
 The app uses local storage to store and retrieve weather and forecast data for a seamless experience on page reload.
+
+## License
+This project is licensed under the MIT License
+
+## Credits
+- OpenWeatherMap API
+- DayJS Library
+
+## Author
+Habib Hakeem
