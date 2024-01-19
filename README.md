@@ -5,6 +5,7 @@
 - [Table Of Contents](#table-of-contents)
 - [Overview](#overview)
 - [Features](#features)
+- [Link](#link)
 - [Usage](#usage)
 - [Installation](#installation)
 - [Local Storage](#local-storage)
@@ -21,10 +22,15 @@ The Weather App is a web application that allows users to check the current weat
 - **5-Day Weather Forecast:** View a 5-day forecast, including temperature, wind speed, and humidity, to plan ahead.
 - **Search History:** Easily access previously searched cities with the search history feature.
 
+## Link
+
 ## Usage
 1. Enter a city name in the search bar and submit the form.
 2. View current weather data and a 5-day forecast.
 3. Click on a city in the search history to quickly retrieve weather information.
+   
+![Screenshot 2024-01-19 232438](https://github.com/HabibStackz/readme-generator/assets/105345889/562e7dd4-6e3f-469d-a1bb-ad589ea935bf)
+
 
 ### Prerequisites
 
