@@ -113,3 +113,26 @@ function updateSearchHistory(city) {
   });
   historyDiv.appendChild(button);
 }
+
+// Event listener for the search form
+document.getElementById('search-form').addEventListener('submit', async function (event) {
+  event.preventDefault();
+
+  const searchInput = document.getElementById('search-input');
+  const city = searchInput.value.trim();
+
+  if (city !== '') {
+    const weatherData = await getWeatherData(city);
+
+    if (weatherData && weatherData.coord) {
+      const forecastData = await getWeatherForecast(weatherData.coord.lat, weatherData.coord.lon);
+      updateWeatherUI(weatherData);
+      updateForecastUI(forecastData);
+      updateSearchHistory(city);
+    } else {
+      // Handle case when weather data is not available
+      updateWeatherUI(null);
+      updateForecastUI(null);
+    }
+  }
+});
