@@ -98,3 +98,18 @@ function updateForecastUI(forecastData) {
     localStorage.removeItem('forecastData');
   }
 }
+
+// Function to update the search history
+function updateSearchHistory(city) {
+  const historyDiv = document.getElementById('history');
+  const button = document.createElement('button');
+  button.textContent = city;
+  button.className = 'btn btn-secondary btn-sm m-1';
+  button.addEventListener('click', async function () {
+    const weatherData = await getWeatherData(city);
+    const forecastData = await getWeatherForecast(weatherData.coord.lat, weatherData.coord.lon);
+    updateWeatherUI(weatherData);
+    updateForecastUI(forecastData);
+  });
+  historyDiv.appendChild(button);
+}
