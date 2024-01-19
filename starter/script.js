@@ -61,3 +61,40 @@ function updateWeatherUI(weatherData){
     localStorage.removeItem('weatherData');
   }
 }
+
+// Function to update the HTML with the 5-day weather forecast data
+function updateForecastUI(forecastData) {
+  const forecastSection = document.getElementById('forecast');
+  forecastSection.innerHTML = ''; // Clear existing content
+
+  if (forecastData && forecastData.list) {
+    // Iterate over the forecast data and create cards
+    for (let i = 0; i < 5; i++) {
+      const forecast = forecastData.list[i * 8]; // Retrieve forecast data for a specific day (every 8th item in the list)
+
+      const card = document.createElement('div');
+      card.className = 'col mb-3';
+      card.innerHTML = `
+        <div class="card border-0 bg-secondary text-white">
+          <div class="card-body p-3 text-white">
+            <h5 class="card-title fw-semibold">${dayjs(forecast.dt_txt).format('dddd, MMM D')}</h5>
+            <img src="https://openweathermap.org/img/w/${forecast.weather[0].icon}.png" alt="Weather Icon" />
+            <h6 class="card-text my-3 mt-3">Temp: ${forecast.main.temp} °C</h6>
+            <h6 class="card-text my-3">Wind: ${forecast.wind.speed} M/S</h6>
+            <h6 class="card-text my-3">Humidity: ${forecast.main.humidity}%</h6>
+          </div>
+        </div>
+      `;
+      forecastSection.appendChild(card);
+    }
+
+    // Store forecast data in local storage
+    localStorage.setItem('forecastData', JSON.stringify(forecastData));
+  } else {
+    // Display an error message or clear the content if data is not available
+    forecastSection.innerHTML = '<p>Error fetching forecast data</p>';
+
+    // Clear forecast data from local storage
+    localStorage.removeItem('forecastData');
+  }
+}
