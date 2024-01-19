@@ -1,6 +1,6 @@
-/* body{
-    background-image: url(./weather-bg.jpg);
-    background-repeat: no-repeat;
-    background-position:center;
-    background-size: cover;
-} */
+
+.todayTitle{
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+}
