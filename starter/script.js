@@ -45,5 +45,19 @@ function updateWeatherUI(weatherData){
       iconElement.src = iconUrl;
       iconElement.alt = 'Weather Icon';
     }
+
+    // Store today's weather data in local storage
+    localStorage.setItem('weatherData', JSON.stringify(weatherData));
+  } else{
+    // Display an error message or clear the content if data is not available
+    cityElement.textContent = 'City not found';
+    tempElement.textContent = '';
+    windElement.textContent = '';
+    humidityElement.textContent = '';
+    iconElement.src = ''; // Clear the weather icon
+    iconElement.alt = '';
+
+    // Clear today's weather data from local storage
+    localStorage.removeItem('weatherData');
   }
 }
